@@ -1,7 +1,8 @@
 library(shiny)
 library(vroom)
 library(janitor, warn.conflicts = FALSE)
-
+options(shiny.host = "0.0.0.0")
+options(shiny.port = 5000)
 uiUpload <- sidebarLayout(
   sidebarPanel(
     fileInput("data", "Data"),
